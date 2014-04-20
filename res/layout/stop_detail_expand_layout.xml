@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/blacklight" >
+    
+    <TextView
+        android:id="@+id/alarm"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="left"
+        android:textColor="#fcfff0"
+        android:text="red 5 mins\nHawkeye Interdorm 10 mins\nMayflower Shuttle 15 mins "/>    
+
+</LinearLayout>

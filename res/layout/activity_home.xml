@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+   <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1" >
+	
+
+    <Button 
+    android:id="@+id/stopButton"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="20" 
+    android:text="@string/stop"
+    style="@style/White"
+    android:onClick="onClickStop"
+    android:background="@drawable/stop_button"
+    android:gravity="top|center_horizontal"/>
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp" 
+    android:layout_weight="1" 
+    android:background="@drawable/stop_button_dec"     />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1" >
+	
+
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@drawable/route_button_dec"/>
+	
+    <Button 
+    android:id="@+id/routeButton"
+    android:layout_width="match_parent"
+    android:layout_height="0dp" 
+    android:layout_weight="20"     
+    android:text="@string/route" 
+    style="@style/Black"
+    android:onClick="onClickRoute"
+	android:background="@drawable/route_button"
+	android:gravity="bottom|center_horizontal"/>
+    
+    </LinearLayout>
+    
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1" >
+	
+
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="20" 
+    android:text="@string/favorite"  
+    style="@style/Black" 
+    android:background="@drawable/favorite_button" 
+    android:onClick="onClickFavoriteStop"
+    android:gravity="top|center_horizontal"   />
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp" 
+    android:layout_weight="1"    
+    android:background="@drawable/favorite_button_dec"   />
+   
+    </LinearLayout>
+    
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1" >
+	
+
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"  
+    android:background="@drawable/nearme_button_dec"     />
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp" 
+    android:layout_weight="20"     
+    android:text="@string/nearme" 
+    style="@style/Black" 
+    android:onClick="onClickNearMe"
+    android:background="@drawable/nearme_button"
+    android:gravity="bottom|center_horizontal"/>
+    
+    </LinearLayout>
+    
+    
+    
+
+</LinearLayout>
+

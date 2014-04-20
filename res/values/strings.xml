@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ICBusVersion2</string>
+    <string name="stop">S\nT\nO\nP\n</string>
+    <string name="favorite">F\nA\nV\nO\nR\nI\nT\nE\n</string>
+    <string name="nearme">N\nE\nA\nR\n\nM\nE\n</string>
+    <string name="setting">S\nE\nT\nT\nI\nN\nG\n</string>
+    <string name="route">R\nO\nU\nT\nE\n</string>
+    <string name="search">search</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_stops">StopsActivity</string>
+    <string name="title_activity_routes">RoutesActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_near_me">NearMeActivity</string>
+    <string name="title_activity_favorite_stop">FavoriteStopActivity</string>
+    <string name="title_activity_favorite_route">FavoriteRouteActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

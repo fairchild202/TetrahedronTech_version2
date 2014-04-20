@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"  >
+    
+    
+    <LinearLayout 
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="10" 
+    android:orientation="vertical">
+    
+    <EditText 
+    android:id="@+id/search_route"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:background="@drawable/greenlight"/>
+
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/routeListView"
+        android:background="@drawable/route_background"/>
+    
+
+        
+    </LinearLayout>
+    
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1" >
+	
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="@string/stop"   
+    android:textSize="18px"  
+    style="@style/White"     
+    android:onClick="onClickStop"    
+    android:background="@drawable/stop_button_sub"
+      />
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"   
+    android:text="@string/route"
+    android:textSize="20px"
+    android:background="@drawable/route_button_route"
+       />
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"    
+    android:text="@string/favorite" 
+    android:textSize="20px"  
+    android:background="@drawable/favorite_button_sub" 
+    android:onClick="onClickFavoriteStop"    />
+
+    <Button 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"   
+    android:text="@string/nearme"   
+    android:textSize="14px"   
+    android:onClick="onClickNearMe"
+    android:background="@drawable/nearme_button_sub"  />
+    </LinearLayout>
+</LinearLayout>

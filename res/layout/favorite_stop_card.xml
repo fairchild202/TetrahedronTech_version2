@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/favorite_background">
+
+        <TextView
+        	android:id="@+id/stop_list_view_stopId"
+        	style="@style/stopId"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:paddingTop="1dp"/>
+        
+        <TextView
+        	android:id="@+id/stop_list_view_stopName"
+        	style="@style/stopName"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:paddingBottom="1dp"/>
+
+
+</LinearLayout>
