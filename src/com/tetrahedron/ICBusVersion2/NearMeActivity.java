@@ -15,15 +15,17 @@ public class NearMeActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_near_me);
 	}
-
+	//set a link on stop button to stop page on nearby page// 
     public void onClickStop(View view){
     	startActivity(new Intent("android.intent.action.StopsActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		}
+	//set a link on route button to route page on nearby page// 
     public void onClickRoute(View view){
     	startActivity(new Intent("android.intent.action.RoutesActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		}	
+	//set a link on favorite button to favorite page on nearby page// 
     public void onClickFavoriteStop(View view){
     	startActivity(new Intent("android.intent.action.FavoriteStopActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

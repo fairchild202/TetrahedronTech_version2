@@ -20,24 +20,28 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
         
     }
-    
+//set a link on stop button to stop page on main page// 
     public void onClickStop(View view){
     	startActivity(new Intent("android.intent.action.StopsActivity"));
+    	//animation of enter stop page//
 		overridePendingTransition(R.anim.combine2_in, R.anim.combine2_out);
     }
-    	
+//set a link on nearme button to nearme page on main page//    	
     public void onClickNearMe(View view){
     	startActivity(new Intent("android.intent.action.NearMeActivity"));
+    	//animation of enter NearMe page//
 		overridePendingTransition(R.anim.combine2_in, R.anim.combine2_out);
 		}
-   
+//set a link on route button to route page on main page//  
     public void onClickRoute(View view){
     	startActivity(new Intent("android.intent.action.RoutesActivity"));
+    	//animation of enter route page//
 		overridePendingTransition(R.anim.combine2_in, R.anim.combine2_out);
 		}	
-    
+//set a link on favorite button to favorite page on main page//    
     public void onClickFavoriteStop(View view){
     	startActivity(new Intent("android.intent.action.FavoriteStopActivity"));
+    	//animation of enter favorite page//
 		overridePendingTransition(R.anim.combine2_in, R.anim.combine2_out);
 		}	
     @Override

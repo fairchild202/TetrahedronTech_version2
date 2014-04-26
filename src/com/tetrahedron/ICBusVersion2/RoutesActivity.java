@@ -1,5 +1,4 @@
 package com.tetrahedron.ICBusVersion2;
-
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
 import it.gmariotti.cardslib.library.internal.ViewToClickToExpand;
@@ -43,19 +42,14 @@ public class RoutesActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //layout from res.layout.activity_routes//
 		setContentView(R.layout.activity_routes);
 
 		initRouteList();
-		setList(routeListAll);
-		
-		/*
-		//create a key-value bundle and pass the bundle to the fragment
-		Bundle bd = new Bundle();
-		bd.putStringArrayList("key", data);
-		f.setArguments(bd);*/
+		setList(routeListAll);		
 	}
 
-	
+	//create route list//
 	private void initRouteList(){
 		try{
 			AssetManager am=this.getAssets();
@@ -70,7 +64,8 @@ public class RoutesActivity extends Activity{
 				data=line.split(",");
 				((routeListCard) temp).setContent(data[0]);
 				temp.setId(data[0]);
-				
+				//seperate to three different part by name//
+				//set card inner layout of res.layout.route_detail_expand_layout//
 				if (data[2].equals("coralville")){
 					temp.setBackgroundResourceId(R.drawable.card_selector_green);
 					routeListStopCardExpand expand= new routeListStopCardExpand(this);
@@ -106,7 +101,7 @@ public class RoutesActivity extends Activity{
 		
 		
 	}
-	
+	//set card array list//
 	private void setList(ArrayList<Card> routeList){
 		CardArrayAdapter mCardArrayAdapter = new CardArrayAdapter(this,routeList);
 		CardListView listView = (CardListView) findViewById(R.id.routeListView);
@@ -115,15 +110,17 @@ public class RoutesActivity extends Activity{
         }
 	}
 	
-
+    //set a link on nearme button to nearme page on route page// 
     public void onClickNearMe(View view){
     	startActivity(new Intent("android.intent.action.NearMeActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		}
+    //set a link on stop button to stop page on route page// 
     public void onClickStop(View view){
     	startActivity(new Intent("android.intent.action.StopsActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		}
+    //set a link on favorite button to favorite page on route page// 
     public void onClickFavoriteStop(View view){
     	startActivity(new Intent("android.intent.action.FavoriteStopActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

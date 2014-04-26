@@ -31,20 +31,23 @@ public class StopsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //layout from res.layout.activity_stops//
 		setContentView(R.layout.activity_stops);
-		
+		//set array of card//
 		ArrayList<Card> cards = new ArrayList<Card>();
 		cards =setListItem();
-		
 		CardArrayAdapter mCardArrayAdapter = new CardArrayAdapter(this,cards);
+		//a card from xml from <it.gmariotti.cardslib.library.view.CardListView/> id.stopListView//
 		CardListView listView = (CardListView) findViewById(R.id.stopListView);
         if (listView!=null){
             listView.setAdapter(mCardArrayAdapter);}
         }
+	    //find all stops, convert them into cards and return an array list of them//
     	private ArrayList<Card> setListItem(){
     		ArrayList<Card> result=new ArrayList<Card>();
     		try{
     			AssetManager am=this.getAssets();
+    			//allstop.txt can find in assets//
     			InputStream in = am.open("allStops.txt");
     			InputStreamReader isr = new InputStreamReader(in);
     			BufferedReader br= new BufferedReader(isr);
@@ -57,8 +60,10 @@ public class StopsActivity extends Activity {
     				temp.setId(data[0]);
     				line=br.readLine();
     				stopListRouteCardExpand expand = new stopListRouteCardExpand(this);
+    				//set card inner layout of res.layout.stop_detail_expand_layout//
     				expand.setInnerLayout(R.layout.stop_detail_expand_layout);
     				temp.addCardExpand(expand);
+    				//click on card to expand//
     				ViewToClickToExpand viewToClickToExpand = ViewToClickToExpand.builder().setupCardElement(ViewToClickToExpand.CardElementUI.CARD);
     	            temp.setViewToClickToExpand(viewToClickToExpand);
     	            
@@ -74,15 +79,17 @@ public class StopsActivity extends Activity {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+    //set a link on nearme button to nearme page on stop page// 
 	public void onClickNearMe(View view){
     	startActivity(new Intent("android.intent.action.NearMeActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
+	//set a link on route button to route page on stop page// 
     public void onClickRoute(View view){
     	startActivity(new Intent("android.intent.action.RoutesActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		}	
+    //set a link on favorite button to favorite page on stop page// 
     public void onClickFavoriteStop(View view){
     	startActivity(new Intent("android.intent.action.FavoriteStopActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

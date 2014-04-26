@@ -1,5 +1,6 @@
 package com.tetrahedron.ICBusVersion2.cards;
-
+/*this is the class after click on each card on favorite stop page, which will 
+contain the prediction of every route passing this stop*/
 import it.gmariotti.cardslib.library.internal.CardExpand;
 import android.content.Context;
 

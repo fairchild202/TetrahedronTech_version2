@@ -1,5 +1,6 @@
 package com.tetrahedron.ICBusVersion2.cards;
-
+/*this is the class after click on each card on stop page, which will 
+contain the prediction of every route passing this stop*/
 import com.tetrahedron.ICBusVersion2.R;
 
 import it.gmariotti.cardslib.library.internal.CardExpand;
@@ -15,6 +16,7 @@ public class stopListRouteCardExpand extends CardExpand {
 	private int upperBound=-1;
 
 	public stopListRouteCardExpand(Context context) {
+	//layout from res.layout.stop_detail_expand_layout//
 	super(context, R.layout.stop_detail_expand_layout);
 	}
 }

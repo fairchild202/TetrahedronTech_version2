@@ -1,5 +1,7 @@
 package com.tetrahedron.ICBusVersion2;
-
+/*favorite part contain two part: favorite stop and favorite route, this is the second part,
+customer can click the button on the top of favorite stop page to enter this page
+*/
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
 import it.gmariotti.cardslib.library.internal.ViewToClickToExpand;
@@ -38,15 +40,11 @@ public class FavoriteRouteActivity extends Activity {
 		super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);		
 		setContentView(R.layout.activity_favorite_route);
-
+		/*this part I use allRoutes.txt which is same as in route page,
+		you can change this part to fit the favorite route by yourself*/
 		initRouteList();
 		setList(routeListAll);
 		
-		/*
-		//create a key-value bundle and pass the bundle to the fragment
-		Bundle bd = new Bundle();
-		bd.putStringArrayList("key", data);
-		f.setArguments(bd);*/
 	}
 
 	
@@ -103,24 +101,27 @@ public class FavoriteRouteActivity extends Activity {
 	
 	private void setList(ArrayList<Card> routeList){
 		CardArrayAdapter mCardArrayAdapter = new CardArrayAdapter(this,routeList);
-		CardListView listView = (CardListView) findViewById(R.id.routeListView);
+		CardListView listView = (CardListView) findViewById(R.id.favoritestopListView);
         if (listView!=null){
             listView.setAdapter(mCardArrayAdapter);
         }
 	}
-
+    //set a link on nearme button to nearme page on favorite route page// 
     public void onClickNearMe(View view){
     	startActivity(new Intent("android.intent.action.NearMeActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);   
 		}
+  //set a link on stop button to stop page on favorite route page// 
     public void onClickStop(View view){
     	startActivity(new Intent("android.intent.action.StopsActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);  
 		}
+  //set a link on route button to route page on favorite route page// 
     public void onClickRoute(View view){
     	startActivity(new Intent("android.intent.action.RoutesActivity"));
 		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		}
+  //set a link on favorite stop button to favorite main page on favorite route page// 
     public void onClickfavoriteStop(View view){
     	startActivity(new Intent("android.intent.action.FavoriteStopActivity"));
 		overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_in_from_left);
